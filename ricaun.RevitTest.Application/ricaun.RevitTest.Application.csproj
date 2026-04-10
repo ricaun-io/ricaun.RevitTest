@@ -142,7 +142,7 @@
   <PropertyGroup>
     <WeaverConfiguration>
       <Weavers>
-        <Costura LoadAtModuleInit="false" />
+        <Costura CreateTemporaryAssemblies="true" LoadAtModuleInit="false" />
       </Weavers>
     </WeaverConfiguration>
   </PropertyGroup>
