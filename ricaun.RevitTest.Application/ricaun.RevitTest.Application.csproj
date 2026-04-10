@@ -124,7 +124,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="ricaun.Revit.UI" Version="*" />
+    <PackageReference Include="ricaun.Revit.UI" Version="*-*" />
     <PackageReference Include="ricaun.Revit.UI.Tasks" Version="*" />
     <PackageReference Include="ricaun.Revit.UI.Busy" Version="*" />
     <PackageReference Include="ricaun.NUnit" Version="*" />
