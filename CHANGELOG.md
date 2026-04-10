@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [1.11.1] / 2026-04-10
 ### Features
 - Update `ricaun.Revit.UI` to `0.9.0`.
+### Application
+- Remove `Newtonsoft.Json` dependency.
 ### Tests
 - Update test project to support `Revit 2027`.
 

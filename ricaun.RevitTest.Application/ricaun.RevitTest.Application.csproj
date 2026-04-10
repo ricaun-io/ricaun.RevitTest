@@ -124,7 +124,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="ricaun.Revit.UI" Version="*-*" />
+    <PackageReference Include="ricaun.Revit.UI" Version="*" />
     <PackageReference Include="ricaun.Revit.UI.Tasks" Version="*" />
     <PackageReference Include="ricaun.Revit.UI.Busy" Version="*" />
     <PackageReference Include="ricaun.NUnit" Version="*" />
@@ -148,9 +148,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="9.*" IncludeAssets="build; compile" PrivateAssets="All">
-      <NoWarn>NU1903</NoWarn>
-    </PackageReference>
     <PackageReference Include="Revit_All_Main_Versions_API_x64" Version="$(RevitVersion).*-*" IncludeAssets="build; compile" PrivateAssets="All" />
   </ItemGroup>
 
