@@ -46,12 +46,21 @@ namespace ricaun.RevitTest.Tests
         /// Check is Revit API is in context using the ActiveAddInId property.
         /// </summary>
         /// <remarks>
-        /// The ActiveAddInId property is null when the Revit API is not in context.
+        /// The ActiveAddInId property is null when the Revit API is not in context. (Revit 2027 change this...)
         /// </remarks>
         private bool InContext(UIApplication uiapp)
         {
-            return !(uiapp.ActiveAddInId is null);
+            //return !(uiapp.ActiveAddInId is null);
+            try
+            {
+                uiapp.Idling += Application_Idling;
+                uiapp.Idling -= Application_Idling;
+                return true;
+            }
+            catch { } // Invalid call to Revit API! Revit is currently not within an API context.
+            return false;
         }
+        static void Application_Idling(object sender, Autodesk.Revit.UI.Events.IdlingEventArgs e) { }
 
         [Test]
         public void GetAssemblies()

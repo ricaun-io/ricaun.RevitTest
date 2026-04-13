@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+﻿using ricaun.NamedPipeWrapper.Json;
 
 namespace ricaun.RevitTest.Application.Revit
 {
@@ -36,7 +36,7 @@ namespace ricaun.RevitTest.Application.Revit
             try
             {
                 var comments = GetComments(fileName);
-                return JsonConvert.DeserializeObject<T>(comments);
+                return JsonExtension.JsonDeserialize<T>(comments);
             }
             catch { }
             return null;
